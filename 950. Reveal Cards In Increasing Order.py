@@ -1,6 +1,7 @@
-#Question : https://leetcode.com/problems/reveal-cards-in-increasing-order/
+# Question : https://leetcode.com/problems/reveal-cards-in-increasing-order/
 from collections import deque
 from typing import List
+
 
 class Solution:
     def deckRevealedIncreasing(self, deck: List[int]) -> List[int]:

@@ -1,4 +1,4 @@
-#Question :- https://leetcode.com/problems/shifting-letters/
+# Question :- https://leetcode.com/problems/shifting-letters/
 class Solution:
     def shiftingLetters(self, s: str, shifts: List[int]) -> str:
         s = list(s)
@@ -8,7 +8,7 @@ class Solution:
             shiftVal += shifts[-i]
             sumVal = shiftVal + startingNum
             sumVal %= 26
-            if (sumVal == 0):
+            if sumVal == 0:
                 sumVal = 26
             s[-i] = chr(sumVal + 96)
-        return ''.join(s)
+        return "".join(s)
