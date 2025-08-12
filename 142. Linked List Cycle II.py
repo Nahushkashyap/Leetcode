@@ -9,13 +9,11 @@ class Solution:
     def detectCycle(self, head: Optional[ListNode]) -> Optional[ListNode]:
         if head == None:
             return None
-        seen_nodes = {head: 0}
-        node_index = 1
+        seen_nodes = set({head})
         while head.next != None:
             node = head.next
             if node not in seen_nodes:
-                seen_nodes[node] = node_index
-                node_index += 1
+                seen_nodes.add(node)
                 head = node
             else:
                 return node
